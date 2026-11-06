@@ -1,0 +1,33 @@
+* { box-sizing: border-box; }
+body {
+  width: 340px; margin: 0; padding: 16px;
+  font: 14px/1.4 Arial, sans-serif; color: #25243a;
+  background: #f7f7fb;
+}
+header { display: flex; align-items: center; gap: 11px; margin-bottom: 14px; }
+.logo { width: 42px; height: 42px; border-radius: 12px; background: #6750c8; color: white;
+  display: grid; place-items: center; font-size: 23px; font-weight: bold; }
+h1 { margin: 0; color: #6750c8; font-size: 21px; }
+header p { margin: 2px 0 0; color: #77758a; font-size: 12px; }
+.panel { background: white; border: 1px solid #e7e5f0; border-radius: 14px; padding: 13px; margin-bottom: 11px;
+  box-shadow: 0 2px 7px #2420440a; }
+h2 { font-size: 14px; margin: 0 0 9px; }
+h2:not(:first-child) { margin-top: 13px; }
+.swatches { display: flex; flex-wrap: wrap; gap: 7px; min-height: 30px; }
+.swatch { width: 30px; height: 30px; border-radius: 8px; border: 1px solid #0002; cursor: pointer; position: relative; }
+.swatch:hover::after { content: attr(data-color); position: absolute; top: 33px; left: 0; background: #222; color: white; padding: 3px 5px; border-radius: 4px; font-size: 10px; z-index: 2; }
+.fonts { display: grid; gap: 5px; color: #454357; }
+.font-item { display: flex; justify-content: space-between; gap: 8px; }
+.font-item small { color: #77758a; }
+button { border: 0; border-radius: 8px; padding: 10px 12px; font-weight: 700; cursor: pointer; }
+.primary { width: 100%; margin-top: 12px; background: #6750c8; color: white; }
+.secondary { width: 100%; background: #eeeafc; color: #5540b3; }
+.save-row { display: flex; gap: 7px; }
+input { min-width: 0; flex: 1; border: 1px solid #dcd9e9; border-radius: 8px; padding: 9px; outline-color: #6750c8; }
+#saveKit { background: #6750c8; color: white; }
+.kit { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 8px; margin-top: 8px; gap: 8px; }
+.kit-name { overflow-wrap: anywhere; }
+.kit-actions { display: flex; gap: 4px; }
+.kit-actions button { padding: 5px 7px; background: #f0eef8; color: #51458a; font-size: 11px; }
+.hint, .muted { color: #77758a; font-size: 12px; }
+#status { margin-top: 8px; color: #5141a5; font-size: 12px; min-height: 15px; }

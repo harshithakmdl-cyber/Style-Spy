@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Style Spy</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="logo">S</div>
+    <div>
+      <h1>Style Spy</h1>
+      <p>Inspect and save a page's design</p>
+    </div>
+  </header>
+
+  <section class="panel">
+    <h2>Colours</h2>
+    <div id="colors" class="swatches"><span class="muted">Loading colours…</span></div>
+    <h2>Fonts</h2>
+    <div id="fonts" class="fonts"><span class="muted">Loading fonts…</span></div>
+    <button id="copyCss" class="primary">Copy as CSS</button>
+  </section>
+
+  <section class="panel">
+    <h2>Save style kit</h2>
+    <div class="save-row">
+      <input id="kitName" type="text" placeholder="Kit name (e.g. Portfolio)">
+      <button id="saveKit">Save</button>
+    </div>
+    <div id="savedKits"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Pick a style</h2>
+    <p class="hint">Click a page element to copy its colour, font, and size. Press Esc to stop.</p>
+    <button id="pick" class="secondary">Pick from page</button>
+    <div id="status" role="status"></div>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>
